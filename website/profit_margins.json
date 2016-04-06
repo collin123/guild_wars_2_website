@@ -1,0 +1,130 @@
+{
+  "profit": {
+    "24": {
+      "buy": "3s 57c",
+      "profit": "1s 40c",
+      "sell": "5s 85c"
+    },
+    "68": {
+      "buy": "2s 17c",
+      "profit": "50c",
+      "sell": "3s 15c"
+    },
+    "69": {
+      "buy": "2s 8c",
+      "profit": "72c",
+      "sell": "3s 30c"
+    },
+    "70": {
+      "buy": "1s 10c",
+      "profit": "1s 87c",
+      "sell": "3s 50c"
+    },
+    "71": {
+      "buy": "1s 25c",
+      "profit": "11c",
+      "sell": "1s 60c"
+    },
+    "72": {
+      "buy": "2g 42s 60c",
+      "profit": "1g 82s 80c",
+      "sell": "5g 0s 48c"
+    },
+    "73": {
+      "buy": "43s 4c",
+      "profit": "41s 94c",
+      "sell": "99s 98c"
+    },
+    "74": {
+      "buy": "94c",
+      "profit": "7s 70c",
+      "sell": "10s 17c"
+    },
+    "75": {
+      "buy": "6g 85s 41c",
+      "profit": "28s 95c",
+      "sell": "8g 40s 43c"
+    },
+    "76": {
+      "buy": "4g 15s 87c",
+      "profit": "7g 73s 24c",
+      "sell": "13g 98s 96c"
+    },
+    "77": {
+      "buy": "58c",
+      "profit": "1s 95c",
+      "sell": "2s 98c"
+    },
+    "78": {
+      "buy": "1s 37c",
+      "profit": "1s 17c",
+      "sell": "2s 99c"
+    },
+    "79": {
+      "buy": "1g 10s 55c",
+      "profit": "33s 61c",
+      "sell": "1g 69s 61c"
+    },
+    "80": {
+      "buy": "1g 71s 13c",
+      "profit": "42s 17c",
+      "sell": "2g 50s 95c"
+    },
+    "81": {
+      "buy": "58c",
+      "profit": "1s 7c",
+      "sell": "1s 95c"
+    },
+    "82": {
+      "buy": "42s 87c",
+      "profit": "12s 71c",
+      "sell": "65s 39c"
+    },
+    "83": {
+      "buy": "1s 23c",
+      "profit": "2s 16c",
+      "sell": "3s 99c"
+    },
+    "84": {
+      "buy": "3g 5s 19c",
+      "profit": "85s 80c",
+      "sell": "4g 59s 99c"
+    },
+    "85": {
+      "buy": "1g 49s 7c",
+      "profit": "1g 52s 92c",
+      "sell": "3g 55s 29c"
+    },
+    "86": {
+      "buy": "70s 44c",
+      "profit": "40s 6c",
+      "sell": "1g 30s 0c"
+    },
+    "87": {
+      "buy": "1s 13c",
+      "profit": "48c",
+      "sell": "1s 90c"
+    },
+    "88": {
+      "buy": "40s 70c",
+      "profit": "40s 58c",
+      "sell": "95s 63c"
+    },
+    "89": {
+      "buy": "40s 61c",
+      "profit": "16s 34c",
+      "sell": "67s 0c"
+    },
+    "90": {
+      "buy": "80c",
+      "profit": "60c",
+      "sell": "1s 65c"
+    },
+    "91": {
+      "buy": "46s 55c",
+      "profit": "9s 32c",
+      "sell": "65s 73c"
+    }
+  },
+  "time_stamp": "2015-12-15T18:18:51.252604"
+}
