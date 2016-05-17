@@ -23,7 +23,7 @@ def query_to_int(arg, default):
 
 def query_to_coin(arg, default):
 	arg = flask.request.values.get(arg)
-	if arg is None:
+	if arg is None or arg == '':
 		return default
 	arg = gw2.currencies.Coins.from_string(arg)
 	return arg
@@ -33,10 +33,10 @@ def query_to_coin(arg, default):
 @app.route('/index')
 def index():
 	count = query_to_int('count', 10)
-	min_sell = query_to_coin('min-sell', None)
-	max_sell = query_to_coin('max-sell', None)
-	min_buy = query_to_coin('min-buy', None)
-	max_buy = query_to_coin('max-buy', None)
+	min_sell = query_to_coin('min-sell', 0)
+	max_sell = query_to_coin('max-sell', float('inf'))
+	min_buy = query_to_coin('min-buy', 0)
+	max_buy = query_to_coin('max-buy', float('inf'))
 	profit_prices = organize_profits('profit_margins.json', count, max_buy, min_buy, max_sell, min_sell)
 	return flask.render_template(
 		'index.html',
