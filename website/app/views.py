@@ -33,10 +33,10 @@ def query_to_coin(arg, default):
 @app.route('/index')
 def index():
 	count = query_to_int('count', 10)
-	min_sell = query_to_coin('min_sell', None)
-	max_sell = query_to_coin('max_sell', None)
-	min_buy = query_to_coin('min_buy', None)
-	max_buy = query_to_coin('max_buy', None)
+	min_sell = query_to_coin('min-sell', None)
+	max_sell = query_to_coin('max-sell', None)
+	min_buy = query_to_coin('min-buy', None)
+	max_buy = query_to_coin('max-buy', None)
 	profit_prices = organize_profits('profit_margins.json', count, max_buy, min_buy, max_sell, min_sell)
 	return flask.render_template(
 		'index.html',
