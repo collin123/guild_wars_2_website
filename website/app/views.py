@@ -40,6 +40,16 @@ def index():
 	profit_prices = organize_profits('profit_margins.json', count, max_buy, min_buy, max_sell, min_sell)
 	return flask.render_template(
 		'index.html',
-		title='Home',
+		title='Profit Margins',
 		profit_prices=profit_prices
 	)
+
+def update():
+	with open("profit_margins.json") as json_file:
+		json_data = json.load(json_file)
+		last_updated = json_data['time_stamp']
+	return flask.render_template(
+		'update.html',
+		last_updated=last_updated,
+	)
+	

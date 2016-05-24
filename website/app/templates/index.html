@@ -1,55 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Guild Wars 2 Profits</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </head>
-
-    {% if title %}
-    <title>{{ title }} - microblog</title>
-    {% else %}
-    <title>Welcome to microblog</title>
-    {% endif %}
-  </head>
-  <body>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="input-min-buy" class="col-sm-2 control-label">Minimum Buy</label>
-        <div class="col-sm-4">
-          <input id="input-min-buy" type="text" name="min-buy" class="form-control" placeholder="Minimum Buy">
-        </div>
-        <label for="input-min-sell" class="col-sm-2 control-label">Minimum Sell</label>
-        <div class="col-sm-4">
-          <input type="text" name="min-sell" class="form-control" placeholder="Minimum Sell">
-        </div>
+{% extends "base.html" %}
+{% block content %}
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="input-min-buy" class="col-sm-2 control-label">Minimum Buy</label>
+      <div class="col-sm-4">
+        <input id="input-min-buy" type="text" name="min-buy" class="form-control" placeholder="Minimum Buy">
       </div>
-      <div class="form-group">
-        <label for="input-max-buy" class="col-sm-2 control-label">Maximum Buy</label>
-        <div class="col-sm-4">
-          <input id="input-max-buy" type="text" name="max-buy" class="form-control" placeholder="Maximum Buy">
-        </div>
-        <label for="input-max-sell" class="col-sm-2 control-label">Maximum Sell</label>
-        <div class="col-sm-4">
-          <input type="text" name="max-sell" class="form-control" placeholder="Maximum Sell">
-        </div>
+      <label for="input-min-sell" class="col-sm-2 control-label">Minimum Sell</label>
+      <div class="col-sm-4">
+        <input type="text" name="min-sell" class="form-control" placeholder="Minimum Sell">
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <div class="panel panel-default">
-      <div class="panel-heading"> Search Results</div>
-      <table class="table table-hover">
-        <tr><th>Item ID</th><th>Item Name</th><th>Buy Price</th><th>Sell Price</th><th>Profit Margin</th></tr>
-        {% for item_id, item_info in profit_prices.items() %}
-        <tr><td>{{ item_id }}</td><td>{{ item_info['name'] }}</td><td>{{item_info['buy'] }}</td><td>{{ item_info['sell'] }}</td><td>{{ item_info['profit'] }}</td></tr>
-        {% endfor %}
-      </table>
     </div>
-  </body>
-</html>
+    <div class="form-group">
+      <label for="input-max-buy" class="col-sm-2 control-label">Maximum Buy</label>
+      <div class="col-sm-4">
+        <input id="input-max-buy" type="text" name="max-buy" class="form-control" placeholder="Maximum Buy">
+      </div>
+      <label for="input-max-sell" class="col-sm-2 control-label">Maximum Sell</label>
+      <div class="col-sm-4">
+        <input type="text" name="max-sell" class="form-control" placeholder="Maximum Sell">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <div class="panel panel-default">
+    <div class="panel-heading"> Search Results</div>
+    <table class="table table-hover">
+      <tr><th>Item ID</th><th>Item Name</th><th>Buy Price</th><th>Sell Price</th><th>Profit Margin</th></tr>
+      {% for item_id, item_info in profit_prices.items() %}
+      <tr><td>{{ item_id }}</td><td>{{ item_info['name'] }}</td><td>{{item_info['buy'] }}</td><td>{{ item_info['sell'] }}</td><td>{{ item_info['profit'] }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+    Update Data
+  </button>
+  <p>This data was last updated {{ last_updated }} </p>
+{% endblock %}
+
